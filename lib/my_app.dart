@@ -1,5 +1,5 @@
-import 'package:code_connect_frontend/ui/core/theme/app_theme.dart';
-import 'package:code_connect_frontend/ui/screen/sobre_nos_screen.dart';
+import 'package:code_connect_frontend/src/presentation/core/theme/app_theme.dart';
+import 'package:code_connect_frontend/src/presentation/screen/sobre_nos_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {

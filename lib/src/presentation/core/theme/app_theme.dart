@@ -1,5 +1,6 @@
+import 'package:code_connect_frontend/src/presentation/core/tokens/app_typography.dart';
 import 'package:flutter/material.dart';
-import 'app_colors.dart';
+import '../tokens/app_colors.dart';
 
 class AppTheme {
   // static ThemeData get lightTheme {
@@ -29,11 +30,13 @@ class AppTheme {
       secondary: AppColors.pastelGreen,
       tertiary: AppColors.petrolGreen,
       onPrimary: AppColors.offwhite,
+      error: AppColors.error,
     );
 
     return ThemeData(
       useMaterial3: true,
       colorScheme: colorScheme,
+      textTheme: AppTypography.textTheme,
       scaffoldBackgroundColor: AppColors.grafite,
 
       appBarTheme: AppBarTheme(backgroundColor: AppColors.grafite),
@@ -41,7 +44,7 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.lightGreen,
-          foregroundColor: AppColors.darkGrey,
+          foregroundColor: AppColors.petrolGreen,
         ),
       ),
     );
