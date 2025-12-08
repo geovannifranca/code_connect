@@ -33,6 +33,13 @@ flutter:
   assets:
     - assets/images/Logo_Large.png
     - assets/images/Logo_small.png
+    - assets/images/tribo_alura_conect.png
+    - assets/images/codando.png
+    - assets/images/simbolo_logo.png
+    - assets/icons/account_circle_1.png
+    - assets/icons/feed.png
+    - assets/icons/info_2.png
+    - assets/icons/logout_2.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

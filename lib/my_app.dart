@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Code Connect',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.darktTheme,
       home: const SafeArea(child: SobreNosScreen()),
     );
