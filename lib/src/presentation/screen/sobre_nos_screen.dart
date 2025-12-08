@@ -1,5 +1,4 @@
 import 'package:code_connect_frontend/src/presentation/components/buttons/secundary_button.dart';
-import 'package:code_connect_frontend/src/presentation/core/tokens/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SobreNosScreen extends StatelessWidget {
@@ -44,7 +43,7 @@ class SobreNosScreen extends StatelessWidget {
 
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        color: AppColors.lightGrey,
+                        color: Theme.of(context).colorScheme.surfaceDim,
                       ),
                     ),
                   ),
@@ -60,7 +59,7 @@ class SobreNosScreen extends StatelessWidget {
                   Text(
                     'Nossa Missão!',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: AppColors.lightGrey,
+                      color: Theme.of(context).colorScheme.surfaceDim,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -77,7 +76,7 @@ class SobreNosScreen extends StatelessWidget {
                   Text(
                     'Junte-se a Nós!',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: AppColors.lightGrey,
+                      color: Theme.of(context).colorScheme.surfaceDim,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -97,7 +96,7 @@ class SobreNosScreen extends StatelessWidget {
                   Text(
                     'Juntos, vamos transformar ideias em inovações e moldar o futuro digital.',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: AppColors.mediumGrey,
+                      color: Theme.of(context).colorScheme.outlineVariant,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -121,7 +120,7 @@ class SobreNosScreen extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Image.asset(
               'assets/icons/info_2.png',
-              color: AppColors.offwhite,
+              color: Theme.of(context).colorScheme.onPrimary,
             ),
             label: 'Sobre nós',
           ),
@@ -131,10 +130,13 @@ class SobreNosScreen extends StatelessWidget {
           ),
         ],
         type: BottomNavigationBarType.fixed,
-        selectedLabelStyle: TextStyle(color: AppColors.lightGrey, fontSize: 16),
-        backgroundColor: AppColors.darkGrey,
+        selectedLabelStyle: TextStyle(
+          color: Theme.of(context).colorScheme.surfaceDim,
+          fontSize: 16,
+        ),
+        backgroundColor: Theme.of(context).colorScheme.onSurfaceVariant,
         currentIndex: 2,
-        selectedItemColor: AppColors.offwhite,
+        selectedItemColor: Theme.of(context).colorScheme.onPrimary,
       ),
     );
   }

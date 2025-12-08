@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Code Connect',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.darktTheme,
+      theme: AppTheme.darkTheme,
       home: const SafeArea(child: SobreNosScreen()),
     );
   }
