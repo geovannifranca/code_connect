@@ -6,7 +6,6 @@ import 'package:code_connect_frontend/src/presentation/core/tokens/app_colors.da
 class AppTypography {
   static const String _fontFamily = 'Prompt';
   static final Color _baseColor = AppColors.offwhite;
-  static final double _scale = 2.0;
 
   static TextTheme get textTheme {
     return TextTheme(
@@ -14,7 +13,7 @@ class AppTypography {
       displayMedium: TextStyle(
         fontFamily: _fontFamily,
         color: _baseColor,
-        fontSize: 44.0 + _scale,
+        fontSize: 48.0,
         fontWeight: FontWeight.w500,
         height: 1.20,
       ),
@@ -23,7 +22,7 @@ class AppTypography {
       displaySmall: TextStyle(
         fontFamily: _fontFamily,
         color: _baseColor,
-        fontSize: 37.0 + _scale,
+        fontSize: 40.0,
         fontWeight: FontWeight.w500,
         height: 1.20,
       ),
@@ -31,7 +30,7 @@ class AppTypography {
       titleLarge: TextStyle(
         fontFamily: _fontFamily,
         color: _baseColor,
-        fontSize: 31.0 + _scale,
+        fontSize: 34.0,
         fontWeight: FontWeight.w400,
         height: 1.50,
       ),
@@ -39,7 +38,7 @@ class AppTypography {
       titleMedium: TextStyle(
         fontFamily: _fontFamily,
         color: _baseColor,
-        fontSize: 26.0 + _scale,
+        fontSize: 28.0,
         fontWeight: FontWeight.w400,
         height: 1.50,
       ),
@@ -47,7 +46,7 @@ class AppTypography {
       bodyLarge: TextStyle(
         fontFamily: _fontFamily,
         color: _baseColor,
-        fontSize: 22 + _scale,
+        fontSize: 24,
         fontWeight: FontWeight.w400,
         height: 1.50,
       ),
@@ -55,7 +54,7 @@ class AppTypography {
       bodyMedium: TextStyle(
         fontFamily: _fontFamily,
         color: _baseColor,
-        fontSize: 18.0 + _scale,
+        fontSize: 20.0,
         fontWeight: FontWeight.w400,
         height: 1.50,
       ),
@@ -63,7 +62,7 @@ class AppTypography {
       bodySmall: TextStyle(
         fontFamily: _fontFamily,
         color: _baseColor,
-        fontSize: 15.0 + _scale,
+        fontSize: 18.0,
         fontWeight: FontWeight.w400,
         height: 1.50,
       ),
@@ -71,7 +70,7 @@ class AppTypography {
       labelSmall: TextStyle(
         fontFamily: _fontFamily,
         color: _baseColor,
-        fontSize: 12.5 + _scale,
+        fontSize: 14.5,
         fontWeight: FontWeight.w400,
         height: 1.50,
       ),

@@ -1,5 +1,5 @@
+import 'package:code_connect_frontend/src/presentation/screen/button_navigator_bar_screen.dart';
 import 'package:code_connect_frontend/src/presentation/core/theme/app_theme.dart';
-import 'package:code_connect_frontend/src/presentation/screen/sobre_nos_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       title: 'Code Connect',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      home: const SafeArea(child: SobreNosScreen()),
+      home: const ButtonNavigatorBarScreen(),
     );
   }
 }

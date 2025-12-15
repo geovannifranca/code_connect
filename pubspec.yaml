@@ -55,7 +55,23 @@ flutter:
     - family: Prompt
       fonts:
         - asset: assets/fonts/Prompt-Medium.ttf
+        - asset: assets/fonts/Prompt-MediumItalic.ttf
         - asset: assets/fonts/Prompt-Regular.ttf
+        - asset: assets/fonts/Prompt-Black.ttf
+        - asset: assets/fonts/Prompt-BlackItalic.ttf
+        - asset: assets/fonts/Prompt-bold.ttf
+        - asset: assets/fonts/Prompt-boldItalic.ttf
+        - asset: assets/fonts/Prompt-ExtraBold.ttf
+        - asset: assets/fonts/Prompt-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Prompt-ExtraLight.ttf
+        - asset: assets/fonts/Prompt-ExtraLightItalic.ttf
+        - asset: assets/fonts/Prompt-Italic.ttf
+        - asset: assets/fonts/Prompt-Light.ttf
+        - asset: assets/fonts/Prompt-LightItalic.ttf
+        - asset: assets/fonts/Prompt-SemiBold.ttf
+        - asset: assets/fonts/Prompt-SemiBoldItalic.ttf
+        - asset: assets/fonts/Prompt-Thin.ttf
+        - asset: assets/fonts/Prompt-ThinItalic.ttf
   # #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
