@@ -3,15 +3,14 @@ import 'package:code_connect_frontend/src/presentation/screen/perfil_screen.dart
 import 'package:code_connect_frontend/src/presentation/screen/sobre_nos_screen.dart';
 import 'package:flutter/material.dart';
 
-class ButtonNavigatorBarScreen extends StatefulWidget {
-  const ButtonNavigatorBarScreen({super.key});
+class MainHomeScreen extends StatefulWidget {
+  const MainHomeScreen({super.key});
 
   @override
-  State<ButtonNavigatorBarScreen> createState() =>
-      _ButtonNavigatorBarScreenState();
+  State<MainHomeScreen> createState() => _MainHomeScreenState();
 }
 
-class _ButtonNavigatorBarScreenState extends State<ButtonNavigatorBarScreen> {
+class _MainHomeScreenState extends State<MainHomeScreen> {
   int _index = 0;
   final List<Widget> _pages = [
     const FeedScreen(),
