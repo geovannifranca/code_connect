@@ -15,6 +15,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
+  flutter_svg: ^2.2.3
 
 dev_dependencies:
   flutter_test:
@@ -36,10 +37,10 @@ flutter:
     - assets/images/tribo_alura_conect.png
     - assets/images/codando.png
     - assets/images/simbolo_logo.png
-    - assets/icons/account_circle_1.png
-    - assets/icons/feed.png
-    - assets/icons/info_2.png
-    - assets/icons/logout_2.png
+    - assets/icons/account_circle.svg
+    - assets/icons/feed.svg
+    - assets/icons/info.svg
+    - assets/icons/logout.svg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

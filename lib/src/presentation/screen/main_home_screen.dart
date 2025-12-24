@@ -2,6 +2,7 @@ import 'package:code_connect_frontend/src/presentation/screen/feed_screen.dart';
 import 'package:code_connect_frontend/src/presentation/screen/perfil_screen.dart';
 import 'package:code_connect_frontend/src/presentation/screen/sobre_nos_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class MainHomeScreen extends StatefulWidget {
   const MainHomeScreen({super.key});
@@ -17,63 +18,63 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
     const PerfilScreen(),
     const SobreNosScreen(),
   ];
-  void itemSelecionado(int index) {
+  void _itemSelecionado(int index) {
     setState(() {
       _index = index;
     });
   }
 
+  Widget _buildIcon(String assetPath, int index) {
+    final Color color = _index == index
+        ? Theme.of(context)
+              .colorScheme
+              .onInverseSurface // Cor selecionado
+        : Theme.of(context).colorScheme.outlineVariant; // Cor não selecionado
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 18, bottom: 8),
+      child: SvgPicture.asset(
+        assetPath,
+        width: 28,
+        colorFilter: ColorFilter.mode(color, BlendMode.srcIn), // Aplica a cor
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: IndexedStack(index: _index, children: _pages),
-      ),
-      bottomNavigationBar: Container(
-        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.onSurfaceVariant,
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(16.0),
-            topRight: Radius.circular(16.0),
-          ),
+      body: IndexedStack(index: _index, children: _pages),
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(18.0),
+          topRight: Radius.circular(18.0),
         ),
         child: BottomNavigationBar(
-          onTap: itemSelecionado,
-          fixedColor: Theme.of(context).colorScheme.primary,
+          onTap: _itemSelecionado,
+          unselectedItemColor: Theme.of(context).colorScheme.outlineVariant,
+          fixedColor: Theme.of(context).colorScheme.onInverseSurface,
           type: BottomNavigationBarType.fixed,
           currentIndex: _index,
           backgroundColor: Theme.of(context).colorScheme.onSurfaceVariant,
           elevation: 0,
-          items: const [
+          selectedLabelStyle: TextStyle(fontSize: 20.0),
+          unselectedLabelStyle: TextStyle(fontSize: 18.0),
+          items: [
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.symmetric(vertical: 4),
-                child: ImageIcon(AssetImage('assets/icons/feed.png')),
-              ),
+              icon: _buildIcon('assets/icons/feed.svg', 0),
               label: 'Feed',
             ),
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.symmetric(vertical: 4),
-                child: ImageIcon(
-                  AssetImage('assets/icons/account_circle_1.png'),
-                ),
-              ),
+              icon: _buildIcon('assets/icons/account_circle.svg', 1),
               label: 'Perfil',
             ),
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.symmetric(vertical: 4),
-                child: ImageIcon(AssetImage('assets/icons/info_2.png')),
-              ),
+              icon: _buildIcon('assets/icons/info.svg', 2),
               label: 'Sobre nós',
             ),
             BottomNavigationBarItem(
-              icon: Padding(
-                padding: EdgeInsets.symmetric(vertical: 4),
-                child: ImageIcon(AssetImage('assets/icons/logout_2.png')),
-              ),
+              icon: _buildIcon('assets/icons/logout.svg', 3),
               label: 'Sair',
             ),
           ],
